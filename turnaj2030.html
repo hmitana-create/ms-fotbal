@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Informace o Mistrovství světa ve fotbale 2030 a odběr novinek.">
+    <title>Mistrovství světa ve fotbale | MS 2030</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="hlavicka">
+        <div class="kontejner navigace-obal">
+            <h1>MS ve fotbale</h1>
+            <nav aria-label="Hlavní navigace">
+                <ul class="menu">
+                    <li><a href="index.html">Úvod</a></li>
+                    <li><a href="turnaj2030.html" class="aktivni">MS 2030 &amp; Novinky</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="kontejner">
+        <section class="karta">
+            <h2>Mistrovství světa 2030 – Turnaj na třech kontinentech</h2>
+            <p>Jubilejní 24. mistrovství světa ve fotbale oslaví sto let od prvního šampionátu v roce 1930 jedinečným formátem. Hlavními pořadateli jsou <strong>Španělsko, Portugalsko a Maroko</strong>.</p>
+            <p>Úvodní tři zahajovací zápasy se však symbolicky odehrají v Jižní Americe – v Uruguayi, Argentině a Paraguayi.</p>
+        </section>
+
+        <!-- Interaktivní prvek bez JS (z prezentace slide 11) -->
+        <section class="karta">
+            <h2>Často kladené otázky (FAQ)</h2>
+            
+            <details class="faq-polozka">
+                <summary>Kdy přesně turnaj v roce 2030 začíná?</summary>
+                <p>Zahajovací zápasy v Jižní Americe jsou naplánovány na 8. a 9. června 2030, hlavní část v Evropě a Africe odstartuje 13. června 2030.</p>
+            </details>
+
+            <details class="faq-polozka">
+                <summary>Kolik týmů se turnaje zúčastní?</summary>
+                <p>Stejně jako na turnaji v roce 2026 se závěrečného turnaje zúčastní celkem 48 národních týmů rozdělených do 12 skupin.</p>
+            </details>
+        </section>
+
+        <!-- Formulář s JS validací -->
+        <section class="karta">
+            <h2>Odběr novinek o vstupenkách</h2>
+            <p>Zadejte svůj e-mail a oblíbený tým. Jakmile FIFA spustí prodej vstupenek, dáme vám vědět.</p>
+
+            <form id="novinky-form" class="formular" novalidate>
+                <div class="pole-skupina">
+                    <label for="email">Váš e-mail (povinné)</label>
+                    <input type="email" id="email" name="email" placeholder="jan.novak@email.cz" required>
+                </div>
+
+                <div class="pole-skupina">
+                    <label for="tym">Komu fandíte?</label>
+                    <input type="text" id="tym" name="tym" placeholder="Např. Česko, Brazílie...">
+                </div>
+
+                <button type="submit" class="tlacitko">Přihlásit k odběru</button>
+                <p id="form-zprava" class="zprava" role="alert"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="paticka">
+        <div class="kontejner">
+            <p>&copy; 2026 Informační web o MS ve fotbale | Vytvořeno Janem Mitanou pro předmět ZIT (VŠB-TUO)</p>
+        </div>
+    </footer>
+
+</body>
+</html>

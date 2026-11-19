@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Informační web o Mistrovství světa ve fotbale a odpočet do dalšího šampionátu.">
+    <title>Mistrovství světa ve fotbale | Úvod</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="hlavicka">
+        <div class="kontejner navigace-obal">
+            <h1>MS ve fotbale</h1>
+            <nav aria-label="Hlavní navigace">
+                <ul class="menu">
+                    <li><a href="index.html" class="aktivni">Úvod</a></li>
+                    <li><a href="turnaj2030.html">MS 2030 &amp; Novinky</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="kontejner">
+        <!-- Sekce s živým JS odpočtem -->
+        <section class="odpocet-sekce" aria-labelledby="nadpis-odpocet">
+            <h2 id="nadpis-odpocet">Odpočet do MS ve fotbale 2030</h2>
+            <p>Do výkopu jubilejního 100. výročí světového šampionátu zbývá:</p>
+            
+            <div class="odpocet-mrizka" role="timer" aria-live="polite">
+                <div class="cas-karta">
+                    <span id="dny" class="cislo">0</span>
+                    <span class="popisek">Dní</span>
+                </div>
+                <div class="cas-karta">
+                    <span id="hodiny" class="cislo">0</span>
+                    <span class="popisek">Hodin</span>
+                </div>
+                <div class="cas-karta">
+                    <span id="minuty" class="cislo">0</span>
+                    <span class="popisek">Minut</span>
+                </div>
+                <div class="cas-karta">
+                    <span id="sekundy" class="cislo">0</span>
+                    <span class="popisek">Sekund</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Články v CSS Gridu -->
+        <section class="clanky-mrizka">
+            <article class="karta">
+                <h2>Nejsledovanější sportovní událost</h2>
+                <p>Mistrovství světa ve fotbale (FIFA World Cup) se koná každé čtyři roky od roku 1930. Finálový zápas pravidelně sleduje více než miliarda diváků po celém světě.</p>
+            </article>
+
+            <article class="karta">
+                <h2>Historie a rekordy</h2>
+                <p>Nejúspěšnější zemí historie je Brazílie s pěti tituly mistrů světa. Nejlepším střelcem historie turnajů je německý útočník Miroslav Klose se 16 góly.</p>
+            </article>
+
+            <article class="karta">
+                <h2>Vývoj formátu</h2>
+                <p>Zatímco prvního turnaje v Uruguayi se zúčastnilo pouhých 13 týmů, od roku 2026 bojuje o zlatou trofej už 48 národních reprezentací.</p>
+            </article>
+        </section>
+
+        <!-- Přehledná tabulka -->
+        <section class="karta">
+            <h2>Poslední šampioni</h2>
+            <div class="tabulka-obal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rok</th>
+                            <th>Pořadatel</th>
+                            <th>Vítěz</th>
+                            <th>Finalista</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2026</td>
+                            <td>USA, Kanada, Mexiko</td>
+                            <td>Španělsko</td>
+                            <td>Francie</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>Katar</td>
+                            <td>Argentina</td>
+                            <td>Francie</td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td>Rusko</td>
+                            <td>Francie</td>
+                            <td>Chorvatsko</td>
+                        </tr>
+                        <tr>
+                            <td>2014</td>
+                            <td>Brazílie</td>
+                            <td>Německo</td>
+                            <td>Argentina</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="paticka">
+        <div class="kontejner">
+            <p>&copy; 2026 Informační web o MS ve fotbale | Vytvořeno Janem Mitanou pro předmět ZIT (VŠB-TUO)</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+:root {
+    --hlavni: #0b6e4f;
+    --hlavni-tmava: #074f38;
+    --pozadi: #f4f7f6;
+    --karta-pozadi: #ffffff;
+    --text: #1b2421;
+    --text-tlumeny: #4a5954;
+    --ramecek: #d1ddd9;
+    --chyba: #b91c1c;
+    --uspech: #0b6e4f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--pozadi);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.kontejner {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Hlavička a Flexbox navigace */
+.hlavicka {
+    background-color: var(--hlavni);
+    color: #ffffff;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.navigace-obal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.hlavicka h1 {
+    font-size: 1.5rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background-color: var(--hlavni-tmava);
+}
+
+.menu a.aktivni {
+    background-color: #ffffff;
+    color: var(--hlavni);
+    font-weight: 600;
+}
+
+/* Hlavní obsah */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.karta {
+    background-color: var(--karta-pozadi);
+    border: 1px solid var(--ramecek);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.karta h2 {
+    color: var(--hlavni);
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.karta p + p {
+    margin-top: 0.75rem;
+}
+
+/* Odpočet - mobile first (2 sloupce) */
+.odpocet-sekce {
+    background-color: var(--hlavni-tmava);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.odpocet-sekce h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.odpocet-mrizka {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.cas-karta {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cas-karta .cislo {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.cas-karta .popisek {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Články v Gridu - mobile first (1 sloupec) */
+.clanky-mrizka {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Responzivní tabulka */
+.tabulka-obal {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--ramecek);
+}
+
+th {
+    background-color: var(--pozadi);
+    color: var(--hlavni-tmava);
+}
+
+/* FAQ details */
+.faq-polozka {
+    border: 1px solid var(--ramecek);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin-top: 0.75rem;
+}
+
+.faq-polozka summary {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq-polozka p {
+    margin-top: 0.5rem;
+    color: var(--text-tlumeny);
+}
+
+/* Formulář */
+.formular {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    max-width: 450px;
+}
+
+.pole-skupina {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--ramecek);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: 2px solid var(--hlavni);
+    border-color: var(--hlavni);
+}
+
+.tlacitko {
+    background-color: var(--hlavni);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+.tlacitko:hover {
+    background-color: var(--hlavni-tmava);
+}
+
+.zprava {
+    font-weight: 600;
+    min-height: 1.5rem;
+}
+
+.zprava.chyba {
+    color: var(--chyba);
+}
+
+.zprava.uspech {
+    color: var(--uspech);
+}
+
+/* Patička */
+.paticka {
+    background-color: var(--text);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+/* Tablet a desktop (breakpoint 768px dle prezentace) */
+@media (min-width: 768px) {
+    .navigace-obal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .odpocet-mrizka {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .clanky-mrizka {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
